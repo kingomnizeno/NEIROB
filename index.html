@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Official $SCOOBY DOO Token Website">
+  <title>$King Omni</title>
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="scrollBtn" title="Scroll" aria-label="Scroll button">↓</button>
+
+  <div class="main-container">
+    <div class="cartoon-border hero">
+      <h1 class="logo">$King Omni</h1>
+      <span class="contract-address">GTLfa1LPksceHxUHp6mHyqLEYHASeHndz6pmMGnvpump</span>
+      <a href="https://dexscreener.com/solana/82vtjenqabshggx7g7tfoppulfrvspbz9whnqmx2sexw/" class="button buy-button" target="_blank" rel="noopener noreferrer">🚀 Buy Now</a>
+      <div class="social-icons">
+        <a href="https://t.me/KingOmniTG" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://twitter.com/KingZeno63759" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="cartoon-border section">
+      <h2>Roadmap</h2>
+      <ul>
+        <li>✅ Launch Website</li>
+        <li>✅ Token Launch</li>
+        <li>✅ Listings on DEXs</li>
+        <li>🔜 Listings on CEXs</li>
+      </ul>
+    </div>
+
+    <div class="cartoon-border section">
+      <h2>Tokenomics</h2>
+      <ul>
+        <li><strong>Total Supply:</strong> 1,000,000,000 $Omni</li>
+      </ul>
+    </div>
+
+    <div class="cartoon-border section">
+      <h2>FAQs</h2>
+      <div class="faq-item">
+        <strong>What is $Omni?</strong>
+        <p>$Omni, king👑 of the 12 worlds🌍🪐 in Dragon Ball!</p>
+      </div>
+      <div class="faq-item">
+        <strong>Where can I buy?</strong>
+        <p>Available on DEXs. Click the "Buy Now" button above.</p>
+      </div>
+    </div>
+
+    <footer class="cartoon-border">
+      © 2025 $Omni
+      <div class="footer-links">
+        <a href="https://t.me/KingOmniTG" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://twitter.com/KingZeno63759" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // زر التمرير المحسن
+    const scrollBtn = document.getElementById('scrollBtn');
+    scrollBtn.addEventListener('click', () => {
+      if (window.scrollY > 100) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollBtn.textContent = '↓';
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        scrollBtn.textContent = '↑';
+      }
+    });
+
+    // ضبط ارتفاع الشاشة للهواتف
+    function adjustMobileView() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      
+      // تعديلات إضافية للهاتف
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.querySelector('.main-container').style.padding = '10px';
+      }
+    }
+
+    window.addEventListener('load', adjustMobileView);
+    window.addEventListener('resize', adjustMobileView);
+  </script>
+</body>
+</html>
